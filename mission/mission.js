@@ -8,12 +8,12 @@ function changeTheme(){
 
     if(themeValue === "dark"){
         body.classList.add("dark")
-        logoImage.src = "byui-logo_white.png"
+        logoImage.src = "/byui-logo_white.png"
         logoImage.alt = "Logo Dark Theme"
     }
     else{
         body.classList.remove("dark")
-        logoImage.src = "byui-logo_blue.webp"
+        logoImage.src = "/byui-logo_blue.webp"
         logoImage.alt = "BYUI logo"
     }
 
