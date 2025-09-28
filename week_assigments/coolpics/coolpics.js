@@ -27,7 +27,7 @@ function viewerTemplate(src, alt) {
 function viewHandler(event) {
 	// create a variable to hold the element that was clicked on from event.target
     const pictureClicked = event.target;
-    
+    if (pictureClicked.tagName !== "IMG") return;
 
 	// get the src attribute from that element and 'split' it on the "-"
     const imgSrc = pictureClicked.src.split("-");
