@@ -6,13 +6,13 @@
     <meta name="description" content="A gallery of cool pictures.">
     <title>Cool Pics Gallery</title>
     <link rel="stylesheet" href="coolpics.css">
-    <script src="coolpics.js"></script>
+    <script src="coolpics.js" defer></script>
 </head>
 <body>
     <header>
         <h1>Cool Pics 📷</h1>
         <input type="button" value="Menu" id="menuButton">
-        <nav>
+        <nav class="hide">
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">People</a></li>
@@ -22,7 +22,7 @@
             </ul>
         </nav>
     </header>
-    <body>
+    <main>
         <h2>Current Work</h2>
         <section class="gallery">
             <figure>
@@ -53,7 +53,7 @@
                 <img src="images/norris-sm.jpeg" alt="picture">
             </figure>
         </section>
-    </body>
+    </main>
     <footer>
         <p>©2023 Not a real site 😀.</p>
     </footer>
