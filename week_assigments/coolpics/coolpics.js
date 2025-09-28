@@ -50,4 +50,6 @@ function viewHandler(event) {
 menuButton.addEventListener("click", toggleMenu);
 handleResize()
 window.addEventListener("resize", handleResize);
-document.body.addEventListener("click", viewHandler);
+
+const gallery = document.querySelector(".gallery"); 
+gallery.addEventListener("click", viewHandler);
