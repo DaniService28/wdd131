@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Payment</title>
+    <link rel="stylesheet" href="card.css">
+    <script src="card.js" defer></script>
+    <link rel="icon" href="favicon.png" type="image/png">
+</head>
+<body>
+    <div class="front">
+        <div class="titles">
+            <p>TOTAL: $199</p>
+            <img src="imagen.svg" alt="card icon" height="55px">
+        </div>
+        <form id="cardPaymentFront" action="">
+            <p>
+                <label for="cardNumber">CARD NUMBER</label>
+                <input type="text" id="cardNumber" name="cardNumber" placeholder="1234 5678 9101 1020" required>
+            </p>
+            <p>
+                <label for="cardHolder">CARD HOLDER</label>
+                <input type="text" name="cardHolder" id="cardHolder" placeholder="John Due" required>
+            </p>
+            <p>
+                <label for="expirationInfo">EXPIRATION</label>
+                <input type="number" name="expMonth" min="1" max="12" id="expMonth" placeholder="MM" required>
+                <input type="number" name="expYear" id="expYear" placeholder="YY" min="1990" max="2025" required>
+            </p>
+            <div class="back">
+                <p id="blackLine"></p>
+                <p>
+                    <label for="cardCode">CVC/CVV</label>
+                    <input type="number" name="cardCode" id="cardCode" placeholder="xxx" min="100"
+                    max="999" required>
+                </p>
+            </div>
+            <p class="errorMsg"></p>
+            <button id="submitPayment">Submit</button>
+        </form>
+    </div>
+    
+
+
+    
+</body>
+</html>

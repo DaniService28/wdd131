@@ -1,44 +1,71 @@
-// courses.js
 const aCourse = {
   code: "CSE121b",
   name: "Javascript Language",
-  sections: [{ sectionNum: 1, roomNum: 'STC 353', enrolled: 26, days: 'TTh', instructor: 'Bro T'},
-    { sectionNum: 2, roomNum: 'STC 347', enrolled: 28, days: 'TTh', instructor: 'Sis A'}
-    ],
+  sections: [
+    {
+      sectionNum: 1,
+      roomNum: "STC 353",
+      enrolled: 26,
+      days: "TTh",
+      instructor: "Bro T",
+    },
+    {
+      sectionNum: 2,
+      roomNum: "STC 347",
+      enrolled: 25,
+      days: "TTh",
+      instructor: "Sis A",
+    },
+  ],
+  enrollStudent: function (sectionNum) {
+    // find the right section...Array.findIndex will work here
+    const sectionIndex = this.sections.findIndex(
+      (section) => section.sectionNum == sectionNum
+    );
+    if (sectionIndex >= 0) {
+      this.sections[sectionIndex].enrolled++;
+      renderSections(this.sections);
+    }
+  },
+  dropStudent: function (sectionNum) {
+    // find the right section...Array.findIndex will work here
+    const sectionIndex = this.sections.findIndex(
+      (section) => section.sectionNum == sectionNum
+    );
+    if (sectionIndex >= 0) {
+      this.sections[sectionIndex].enrolled--;
+      renderSections(this.sections);
+    }
+  },
+};
 
-    function enrollStudent(sectionNum){
-    console.log("in enroll students", this)
-    const section = this.section.find(
-        (section) => section.sectionNum === sectionNum
-    )}
+function setCourseInfo(course) {
+  const courseName = document.querySelector("#courseName");
+  const coursecode = document.querySelector("#courseCode");
+  courseName.textContent = course.name;
+  coursecode.textContent = course.code;
 }
 
-
-
-function setCourseInformation(course){
-    document.querySelector("#courseName").innerHTML = course.name
-    document.querySelector("#courseCode").innerHTML = course.code
+function renderSections(sections) {
+  const html = sections.map(
+    (section) => `<tr>
+    <td>${section.sectionNum}</td>
+    <td>${section.roomNum}</td>
+    <td>${section.enrolled}</td>
+    <td>${section.days}</td>
+    <td>${section.instructor}</td></tr>`
+  );
+  document.querySelector("#sections").innerHTML = html.join("");
 }
 
-function renderSectionInfo(sections){
-    let sectionEl = document.querySelector("#sections")
-    const format = `<tr><td>${sections.sectionNum}</td>
-                    <td>${sections.roomNum}</td>
-                    <td>${sections.enrolled}</td>
-                    <td>${sections.days}</td>
-                    <td>${sections.instructor}</td></tr>`
-    sectionEl.innerHTML += format 
-}
+document.querySelector("#enrollStudent").addEventListener("click", function () {
+  const sectionNum = document.querySelector("#sectionNumber").value;
+  aCourse.enrollStudent(sectionNum);
+});
+document.querySelector("#dropStudent").addEventListener("click", function () {
+  const sectionNum = document.querySelector("#sectionNumber").value;
+  aCourse.dropStudent(sectionNum);
+});
 
-
-
-function clickHandler(event){
-    console.log("in clickHandler", this)
-    aCourse.enrollStudent(2)
-}
-
-
-setCourseInformation(aCourse)
-aCourse.sections.map(renderSectionInfo).join("")
-
-document.querySelector("#enrollStudent")
+setCourseInfo(aCourse);
+renderSections(aCourse.sections);

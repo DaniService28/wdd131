@@ -30,24 +30,24 @@
 
         <p>
             <label for="paymentMethod">Payment Method</label>
-            <select name="paymentMethod" id="method">
+            <select name="paymentMethod" id="paymentMethod">
                 <option value="">Select a Paymeny Method</option>
                 <option value="creditCard">Credit Card</option>
                 <option value="paypal">Paypal</option>
             </select>
         </p>
 
-        <p class="hide">
-            <label for="crediCard">Credit Card Number</label>
-            <input type="number" name="creditCard" id="creditCard" pattern="[0-9]{16}">
+        <p class="hide" id="creditCardNumberContainer"required>
+            <label for="crediCardNumber">Credit Card Number</label>
+            <input type="number" name="creditCardNumber" id="creditCard" pattern="[0-9]{16}">
         </p>
 
-        <p class="hide">
+        <p class="hide" id="paypalUsernameContainer" required>
             <label for="paypalUsername">Paypal Username</label>
-            <input type="text" name="paypalUsername" id="paypalUsername">
+            <input type="text" name="paypalUsername" id="paypalUsername" placeholder="Enter Paypal username">
         </p>
 
-
+        <button type="submit">Place Order</button>
 
       </form>
       

@@ -3,13 +3,36 @@
   box-sizing: border-box;
 }
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Courier New', Courier, monospace;
   margin: 20px;
 }
 
 main {
   max-width: 600px;
   margin: 0 auto;
+}
+
+p{
+  display: flex;
+  flex-direction: column;
+}
+
+input{
+  padding: 5px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+select{
+  padding: 5px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+button{
+  background-color: green;
+  color: white;
+  border: 1px solid rgb(65, 184, 65);
+  border-radius: 8px;
+  padding: 5px;
 }
 
 .errors > p {
