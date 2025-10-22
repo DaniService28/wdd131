@@ -2,6 +2,7 @@
 :root {
     --hover-color: #0a344d;
     --secondary-color: #00796b;
+    --terciary-color: #ee7342;
     --font-family-body: 'Arial', sans-serif;
     --font-family-headlines: 'Georgia', serif;
     --border-radius: 5px;
@@ -103,9 +104,8 @@ main h1, .introduction {
 
 /* Tags and Rating side by side */
 .tags-rating-container {
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
+  display: flex;;
+  gap: 2rem;
   margin-bottom: 1rem;
 }
 
@@ -117,16 +117,22 @@ main h1, .introduction {
 }
 
 .tag {
-  background-color: #e0f7fa;
-  color: #00796b;
+  background-color: var(--terciary-color);
+  color: #fcffff;
   padding: 0.3rem 0.6rem;
   border-radius: 4px;
   font-size: 0.9rem;
   text-align: center;
 }
 
-.rating{
-  
+.rating p{
+  margin: 0;
+  font-weight: bold;
+}
+
+.counted-reviews{
+  font-size: 0.9rem;
+  color: var(--secondary-color);
 }
 
 .star {
