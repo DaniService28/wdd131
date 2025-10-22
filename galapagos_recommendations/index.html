@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galapagos Recommendations Web Page</title>
+    <link rel="stylesheet" href="styles/recommendations.css">
+    <script src="recommendations.js" defer></script>
+    <meta name="description" content="A">
+    <meta property="og:title" content="Galapagos Recommendations Web Page" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="A collection of recommendations for exploring the Galapagos Islands." />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="" />
+    <meta name="twitter:card" content="summary_large_image" />
+</head>
+<body>
+    <header>
+        <img src="images/logoGalapagosReccommendation.png" alt="Galapagos Recommendations Logo">
+        <ul>
+            <li><a href="#destinations">Destinations</a></li>
+            <li><a href="#accommodations">Accommodations</a></li>
+            <li><a href="#travel-tips">Travel Tips</a></li>
+        </ul>
+    </header>
+    <main>  
+        <h1>Explore the Galapagos Islands</h1>
+        <p class="introduction">The Galapagos Islands are a unique and biodiverse destination, offering visitors the chance to experience incredible wildlife and stunning landscapes. This website aims to provide comprehensive recommendations for exploring the islands, including must-visit destinations, exciting activities, comfortable accommodations, and essential travel tips. Whether you're a nature enthusiast, an adventure seeker, or simply looking to relax, our curated guides will help you make the most of your Galapagos adventure.</p>
+        <section class="search-bar">
+            <p>
+                <label for="search-input">Search for islands</label>
+                <select name="island-options" id="island-options">
+                    <option value="all">All Islands</option>
+                    <option value="isabela">Isabela Island</option>
+                    <option value="santa-cruz">Santa Cruz Island</option>
+                    <option value="san-cristobal">San Cristobal Island</option>
+                    <option value="floreana">Floreana Island</option>
+                </select>
+            </p>
+            <p>
+                <label for="categories">Select category</label>
+                <select name="categories" id="categories">
+                    <option value="all">All Categories</option>
+                    <option value="destinations">Tours</option>
+                    <option value="activities">Popular Activities</option>
+                    <option value="accommodations">Restaurants</option>
+                </select>
+            </p>
+            <button id="search-button">Search</button>
+        </section>
+        <section class="option-card">
+            <!-- Dynamic content will be inserted here -->
+            <div class="top-card">
+                <img src="images/sample-image.jpg" alt="Sample Image">
+                
+            </div>
+            <div class="tags-rating-container">
+                <div class="tags">
+                    <span class="tag">Sample Tag 1</span>
+                    <span class="tag">Sample Tag 2</span>
+                </div>
+                <div class="rating">
+                    <p>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">☆</span>
+                        <span class="star">☆</span>
+                    </p>
+                    <p>35 Reviews</p>
+                </div>
+                <div class="card-bottom">
+                    <h3>Sample Title</h3>
+                    <p>This is a sample description for the recommendation card. It provides a brief overview of the content.</p>
+                    <a href="#more-info">more...</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 Galapagos Recommendations. All rights reserved.</p>
+    </footer>
+</body>
+</html>
