@@ -1,0 +1,12 @@
+body {
+    font-family:'Times New Roman', Times, serif
+    
+}
+ 
+.darkText {
+    background-color: lightslategray;
+    color: white;
+    padding: 1em;
+    width: 30%;
+    margin: auto;
+}
