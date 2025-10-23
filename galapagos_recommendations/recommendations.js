@@ -3,22 +3,22 @@ const recommendations = [
   image: "images/santafe.jpg",
   island: "santa-cruz",
   category: "tours",
-  tags: ["Sample Tag 1", "Sample Tag 2"],
+  tags: ["Snorkeling", "Sea lions"],
   rating: 3, // de 5
   reviews: 35,
-  title: "Sample Title",
-  description: "This is a sample description for the recommendation card. It provides a brief overview of the content.",
+  title: "Santa Fe Snorkeling & Fishing Tour",
+  description: "Snorkel in crystal-clear waters with sea lions, sea turtles, and vibrant fish. Explore Santa Fe Island’s wildlife and enjoy fishing on a scenic return cruise",
   link: "#more-info"
 },
 {
-  image: "images/santafe.jpg",
+  image: "images/pinzon.jpg",
   island: "santa-cruz",
   category: "tours",
-  tags: ["Sample Tag 1", "Sample Tag 2"],
+  tags: ["Snorkeling", "Sharks"],
   rating: 3, // de 5
   reviews: 35,
-  title: "Sample Title",
-  description: "This is a sample description for the recommendation card. It provides a brief overview of the content.",
+  title: "Pinzon Island Snorkeling Adventure",
+  description: "Dive into the underwater world of Pinzon Island, where you can swim with sharks, rays, and colorful fish. This tour offers a unique opportunity to explore the rich marine life of the Galapagos.",
   link: "#more-info"
 },
 {
