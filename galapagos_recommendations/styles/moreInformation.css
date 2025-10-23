@@ -1,0 +1,50 @@
+/* General Reset and Base Styles */
+:root {
+    --hover-color: #0a344d;
+    --secondary-color: #00796b;
+    --terciary-color: #ee7342;
+    --font-family-body: 'Arial', sans-serif;
+    --font-family-headlines: 'Georgia', serif;
+    --border-radius: 5px;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-family-body);
+    background-color: #f5f5f5;
+    color: #333;
+    }
+
+header {
+    text-align: center;
+    
+    padding-bottom: 1rem;
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+header img {
+    max-width: 300px;
+    margin: 0;
+}
+
+header ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: -40px;
+}
+
+header ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.2s color;
+}
+
+header ul li a:hover {
+  color: var(--hover-color);
+}

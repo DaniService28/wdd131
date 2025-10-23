@@ -4,66 +4,66 @@ const recommendations = [
   island: "santa-cruz",
   category: "tours",
   tags: ["Snorkeling", "Sea lions"],
-  rating: 3, // de 5
+  rating: 5, // de 5
   reviews: 35,
   title: "Santa Fe Snorkeling & Fishing Tour",
   description: "Snorkel in crystal-clear waters with sea lions, sea turtles, and vibrant fish. Explore Santa Fe Island’s wildlife and enjoy fishing on a scenic return cruise",
-  link: "#more-info"
+  link: "#01010"
 },
 {
   image: "images/pinzon.jpg",
   island: "santa-cruz",
   category: "tours",
   tags: ["Snorkeling", "Sharks"],
-  rating: 3, // de 5
+  rating: 4, // de 5
   reviews: 35,
   title: "Pinzon Island Snorkeling Adventure",
   description: "Dive into the underwater world of Pinzon Island, where you can swim with sharks, rays, and colorful fish. This tour offers a unique opportunity to explore the rich marine life of the Galapagos.",
-  link: "#more-info"
+  link: "#01011"
 },
 {
   image: "images/floreana.jpg",
   island: "santa-cruz",
   category: "tours",
   tags: ["Snorkeling", "Sea turtles"],
-  rating: 3, // de 5
+  rating: 4, // de 5
   reviews: 35,
   title: "Floreana Island Snorkeling Tour",
   description: "Explore the underwater beauty of Floreana Island, where you can snorkel with sea turtles, colorful fish, and unique marine life. This tour offers a chance to discover the vibrant ecosystem of the Galapagos.",
-  link: "#more-info"
+  link: "#01012"
 },
 {
   image: "images/bartolome.jpg",
   island: "santa-cruz",
   category: "tours",
   tags: ["Hiking", "Snorkeling"],
-  rating: 3, // de 5
+  rating: 5, // de 5
   reviews: 35,
   title: "Bartolome Island Adventure - Pinnacle Rock Hike",
   description: "Hike to the summit of Bartolome Island for panoramic views of Pinnacle Rock and the surrounding islands. After the hike, enjoy snorkeling in the clear waters teeming with marine life.",
-  link: "#more-info"
+  link: "#01013"
 },
 {
   image: "images/tuneles.jpg",
   island: "isabela",
   category: "tours",
   tags: ["Hiking", "Snorkeling"],
-  rating: 3, // de 5
-  reviews: 35,
+  rating: 5, // de 5
+  reviews: 12,
   title: "Tunnels under water tour",
   description: "Explore the unique lava formations and marine life around Tuneles de Cabo Rosa. This tour includes hiking and snorkeling opportunities in the areas around the tunnels.",
-  link: "#more-info"
+  link: "#02013"
 },
 {
-  image: "images/santafe.jpg",
-  island: "santa-cruz",
+  image: "images/isabelaDayTour.jpg",
+  island: "isabela",
   category: "tours",
-  tags: ["Sample Tag 1", "Sample Tag 2"],
-  rating: 3, // de 5
-  reviews: 35,
-  title: "Sample Title",
-  description: "This is a sample description for the recommendation card. It provides a brief overview of the content.",
-  link: "#more-info"
+  tags: ["Hiking", "Snorkeling"],
+  rating: 4, // de 5
+  reviews: 23,
+  title: "Isabela Day Tour - Tintoreras Islet, Flamengos and Tortoise Breeding Center",
+  description: "Enjoy a full-day tour of Isabela Island, including visits to Tintoreras Islet looking for penguins and boobies, the flamingo lagoon, and the Tortoise Breeding Center.",
+  link: "#02014"
 },
 ];
 
@@ -90,7 +90,7 @@ function createHTMLCard(card) {
       <div class="card-bottom">
         <h3>${card.title}</h3>
         <p>${card.description}</p>
-        <a href="${card.link}">more...</a>
+        <a href="moreInformation.html?id=${card.link}">more...</a>
       </div>
     </section>
   `;
@@ -115,3 +115,5 @@ document.querySelector('.search-bar').addEventListener('submit', function(event)
     container.innerHTML = "<p>No recommendations found for the selected criteria.</p>";
   }
 });
+
+
