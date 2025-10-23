@@ -26,11 +26,11 @@
     <main>  
         <h1>Explore the Galapagos Islands</h1>
         <p class="introduction">The Galapagos Islands are a unique and biodiverse destination, offering visitors the chance to experience incredible wildlife and stunning landscapes. This website aims to provide comprehensive recommendations for exploring the islands, including must-visit destinations, exciting activities, comfortable accommodations, and essential travel tips. Whether you're a nature enthusiast, an adventure seeker, or simply looking to relax, our curated guides will help you make the most of your Galapagos adventure.</p>
-        <section class="search-bar">
+        <form class="search-bar">
             <p>
                 <label for="search-input">Search for islands</label>
-                <select name="island-options" id="island-options">
-                    <option value="all">All Islands</option>
+                <select name="island-options" id="island-options" required>
+                    <option value="">All Islands</option>
                     <option value="isabela">Isabela Island</option>
                     <option value="santa-cruz">Santa Cruz Island</option>
                     <option value="san-cristobal">San Cristobal Island</option>
@@ -39,43 +39,44 @@
             </p>
             <p>
                 <label for="categories">Select category</label>
-                <select name="categories" id="categories">
-                    <option value="all">All Categories</option>
-                    <option value="destinations">Tours</option>
+                <select name="categories" id="categories" required>
+                    <option value="">All Categories</option>
+                    <option value="tours">Tours</option>
                     <option value="activities">Popular Activities</option>
-                    <option value="accommodations">Restaurants</option>
+                    <option value="restaurants">Restaurants</option>
                 </select>
             </p>
             <button id="search-button">Search</button>
-        </section>
-        <section class="option-card">
-            <!-- Dynamic content will be inserted here -->
-            <div class="top-card">
-                <img src="images/IMG-20240227-WA0045.jpg" alt="Sample Image">
-                
-            </div>
-            <div class="tags-rating-container">
-                <div class="tags">
-                    <span class="tag">Sample Tag 1</span>
-                    <span class="tag">Sample Tag 2</span>
+        </form>
+        <div class="card-container">
+            <!-- <section class="option-card">
+                <div class="top-card">
+                    <img src="images/IMG-20240227-WA0045.jpg" alt="Sample Image">
+                    
                 </div>
-                <div class="rating">
-                    <p>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">☆</span>
-                        <span class="star">☆</span>                     
-                    </p>
-                    <p class="counted-reviews">35 Reviews</p>
+                <div class="tags-rating-container">
+                    <div class="tags">
+                        <span class="tag">Sample Tag 1</span>
+                        <span class="tag">Sample Tag 2</span>
+                    </div>
+                    <div class="rating">
+                        <p>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">☆</span>
+                            <span class="star">☆</span>                     
+                        </p>
+                        <p class="counted-reviews">35 Reviews</p>
+                    </div>
                 </div>
-            </div>
-            <div class="card-bottom">
-                <h3>Sample Title</h3>
-                <p>This is a sample description for the recommendation card. It provides a brief overview of the content.</p>
-                <a href="#more-info">more...</a>
-            </div>
-        </section>
+                <div class="card-bottom">
+                    <h3>Sample Title</h3>
+                    <p>This is a sample description for the recommendation card. It provides a brief overview of the content.</p>
+                    <a href="#more-info">more...</a>
+                </div> -->
+            <!-- </section> -->
+        </div>
     </main>
     <footer>
         <p>© 2024 Galapagos Recommendations. All rights reserved.</p>
