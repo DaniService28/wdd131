@@ -22,36 +22,36 @@ const recommendations = [
   link: "#more-info"
 },
 {
-  image: "images/santafe.jpg",
+  image: "images/floreana.jpg",
   island: "santa-cruz",
   category: "tours",
-  tags: ["Sample Tag 1", "Sample Tag 2"],
+  tags: ["Snorkeling", "Sea turtles"],
   rating: 3, // de 5
   reviews: 35,
-  title: "Sample Title",
-  description: "This is a sample description for the recommendation card. It provides a brief overview of the content.",
+  title: "Floreana Island Snorkeling Tour",
+  description: "Explore the underwater beauty of Floreana Island, where you can snorkel with sea turtles, colorful fish, and unique marine life. This tour offers a chance to discover the vibrant ecosystem of the Galapagos.",
   link: "#more-info"
 },
 {
-  image: "images/santafe.jpg",
+  image: "images/bartolome.jpg",
   island: "santa-cruz",
   category: "tours",
-  tags: ["Sample Tag 1", "Sample Tag 2"],
+  tags: ["Hiking", "Snorkeling"],
   rating: 3, // de 5
   reviews: 35,
-  title: "Sample Title",
-  description: "This is a sample description for the recommendation card. It provides a brief overview of the content.",
+  title: "Bartolome Island Adventure - Pinnacle Rock Hike",
+  description: "Hike to the summit of Bartolome Island for panoramic views of Pinnacle Rock and the surrounding islands. After the hike, enjoy snorkeling in the clear waters teeming with marine life.",
   link: "#more-info"
 },
 {
-  image: "images/santafe.jpg",
-  island: "santa-cruz",
+  image: "images/tuneles.jpg",
+  island: "isabela",
   category: "tours",
-  tags: ["Sample Tag 1", "Sample Tag 2"],
+  tags: ["Hiking", "Snorkeling"],
   rating: 3, // de 5
   reviews: 35,
-  title: "Sample Title",
-  description: "This is a sample description for the recommendation card. It provides a brief overview of the content.",
+  title: "Tunnels under water tour",
+  description: "Explore the unique lava formations and marine life around Tuneles de Cabo Rosa. This tour includes hiking and snorkeling opportunities in the areas around the tunnels.",
   link: "#more-info"
 },
 {
