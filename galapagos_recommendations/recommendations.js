@@ -107,13 +107,20 @@ document.querySelector('.search-bar').addEventListener('submit', function(event)
     (category === "" || card.category === category)
   );
 
-  const container = document.querySelector('.card-container');
+  renderCards(filteredCards.length > 0 ? filteredCards : []);
+});
 
-  if (filteredCards.length > 0) {
-    container.innerHTML = filteredCards.map(createHTMLCard).join("");
+function renderCards(cards) {
+  const container = document.querySelector('.card-container');
+  if (cards.length > 0) {
+    container.innerHTML = cards.map(createHTMLCard).join("");
   } else {
     container.innerHTML = "<p>No recommendations found for the selected criteria.</p>";
   }
-});
+}
 
+
+document.addEventListener("DOMContentLoaded", function() {
+  renderCards(recommendations);
+});
 
