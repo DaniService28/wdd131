@@ -49,14 +49,29 @@ header ul li a:hover {
   color: var(--hover-color);
 }
 
+main h2{
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.activity-description {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-family: var(--font-family-body);
+}
+
 .info-container {
     display: flex;
     flex-direction: column;
     padding: 2rem;
+    padding-bottom: 0;
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    gap: 2rem;
+    gap: 1rem;
     margin-bottom: 2rem;
 }
 
@@ -81,33 +96,33 @@ header ul li a:hover {
 }
 
 .arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(255, 255, 255, 0.7);
-  border: none;
-  font-size: 24px;
-  padding: 10px;
-  cursor: pointer;
-  border-radius: 50%;
-  transition: background-color 0.3s ease;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
 }
 
 .arrow:hover {
-  background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(238, 115, 66, 0.7);
 }
 
 .arrow.left {
-  left: 10px;
+  left: 0px;
 }
 
 .arrow.right {
-  right: 10px;
+  right: 0px;
 }
 
 /* Tags and Rating side by side */
 .tags-rating-container {
-  display: flex;;
+  display: flex;
   gap: 2rem;
   margin-bottom: 1rem;
 }
