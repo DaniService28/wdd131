@@ -8,7 +8,7 @@ const recommendations = [
   reviews: 35,
   title: "Santa Fe Snorkeling & Fishing Tour",
   description: "Snorkel in crystal-clear waters with sea lions, sea turtles, and vibrant fish. Explore Santa Fe Island’s wildlife and enjoy fishing on a scenic return cruise",
-  link: "#01010"
+  link: "01010"
 },
 {
   image: "images/pinzon.jpg",
@@ -19,7 +19,7 @@ const recommendations = [
   reviews: 35,
   title: "Pinzon Island Snorkeling Adventure",
   description: "Dive into the underwater world of Pinzon Island, where you can swim with sharks, rays, and colorful fish. This tour offers a unique opportunity to explore the rich marine life of the Galapagos.",
-  link: "#01011"
+  link: "01011"
 },
 {
   image: "images/floreana.jpg",
@@ -30,7 +30,7 @@ const recommendations = [
   reviews: 35,
   title: "Floreana Island Snorkeling Tour",
   description: "Explore the underwater beauty of Floreana Island, where you can snorkel with sea turtles, colorful fish, and unique marine life. This tour offers a chance to discover the vibrant ecosystem of the Galapagos.",
-  link: "#01012"
+  link: "01012"
 },
 {
   image: "images/bartolome.jpg",
@@ -41,7 +41,7 @@ const recommendations = [
   reviews: 35,
   title: "Bartolome Island Adventure - Pinnacle Rock Hike",
   description: "Hike to the summit of Bartolome Island for panoramic views of Pinnacle Rock and the surrounding islands. After the hike, enjoy snorkeling in the clear waters teeming with marine life.",
-  link: "#01013"
+  link: "01013"
 },
 {
   image: "images/tuneles.jpg",
@@ -52,7 +52,7 @@ const recommendations = [
   reviews: 12,
   title: "Tunnels under water tour",
   description: "Explore the unique lava formations and marine life around Tuneles de Cabo Rosa. This tour includes hiking and snorkeling opportunities in the areas around the tunnels.",
-  link: "#02013"
+  link: "02013"
 },
 {
   image: "images/isabelaDayTour.jpg",
@@ -63,7 +63,7 @@ const recommendations = [
   reviews: 23,
   title: "Isabela Day Tour - Tintoreras Islet, Flamengos and Tortoise Breeding Center",
   description: "Enjoy a full-day tour of Isabela Island, including visits to Tintoreras Islet looking for penguins and boobies, the flamingo lagoon, and the Tortoise Breeding Center.",
-  link: "#02014"
+  link: "02014"
 },
 ];
 
