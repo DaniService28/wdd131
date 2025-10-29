@@ -154,6 +154,11 @@ main h1, .introduction {
   color: #00796b;
   text-decoration: underline;
   font-weight: bold;
+  transition: 0.2s color;
+}
+
+.card-bottom a:hover {
+  color: var(--hover-color);
 }
 
 /* Footer */
@@ -166,13 +171,35 @@ footer {
 }
 
 /* Responsive Enhancements */
-@media (min-width: 600px) {
+@media (min-width: 690px) {
+  .top-card{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
   .search-bar {
     flex-direction: row;
     justify-content: space-between;
   }
 
   .tags-rating-container {
-    flex-direction: row;
+    flex-direction: column;
   }
 }
+
+@media (min-width: 510px) {
+  .card-content {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .option-card img {
+    width: 250px;
+    height: auto;
+    margin-bottom: 0;
+  }
+
+  
+} 

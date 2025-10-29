@@ -29,26 +29,58 @@ function createHTMLCard(card) {
 
   return `
     <section class="option-card">
-      <div class="top-card">
-        <img src="${card.image[0]}" alt="${card.title}">
-      </div>
-      <div class="tags-rating-container">
-        <div class="tags">${tagsInfo}</div>
-        <div class="rating">
-          <p>${stars}</p>
-          <p class="counted-reviews">${card.reviews} Reviews</p>
+      <div class="card-content">
+        <div class="top-card">
+          <img src="${card.image[0]}" alt="${card.title}">
+        </div>
+        <div class="tags-rating-container">
+          <div class="tags">${tagsInfo}</div>
+          <div class="rating">
+            <p>${stars}</p>
+            <p class="counted-reviews">${card.reviews} Reviews</p>
+          </div>
         </div>
       </div>
       <div class="card-bottom">
         <h3>${card.title}</h3>
-        <p>${card.description}</p>
-        <a href="moreInformation.html?id=${card.id}">more...</a>
+        <p>${card.description} <a class="more-info" href="moreInformation.html?id=${card.id}">more...</a></p>
+        
       </div>
     </section>
   `;
 }
 
-// 🎯 Filtro por isla y categoría
+function createHTMLCardBiggerDevice(card) {
+  const stars = Array.from({ length: 5 }, (_, i) =>
+    `<span class="star">${i < card.rating ? "★" : "☆"}</span>`
+  ).join("");
+
+  const tagsInfo = card.tags.map(tag => `<span class="tag">${tag}</span>`).join("");
+
+  return `
+    <section class="option-card">
+      <div class="card-content">
+        <div class="top-card">
+          <img src="${card.image[0]}" alt="${card.title}">
+          <img src="${card.image[1]}" alt="${card.title}">
+        </div>
+        <div class="tags-rating-container">
+          <div class="tags">${tagsInfo}</div>
+          <div class="rating">
+            <p>${stars}</p>
+            <p class="counted-reviews">${card.reviews} Reviews</p>
+          </div>
+        </div>
+      </div>
+      <div class="card-bottom">
+        <h3>${card.title}</h3>
+        <p>${card.description} <a class="more-info" href="moreInformation.html?id=${card.id}">more...</a></p>
+      </div>
+    </section>
+  `;
+}
+
+// Filtro por isla y categoría
 document.querySelector('.search-bar').addEventListener('submit', function(event) {
   event.preventDefault();
 
@@ -63,22 +95,36 @@ document.querySelector('.search-bar').addEventListener('submit', function(event)
   renderCards(filteredCards.length > 0 ? filteredCards : []);
 });
 
-// 🖼️ Renderizar tarjetas
+
+
+// Renderizar tarjetas
 function renderCards(cards) {
   const container = document.querySelector('.card-container');
-  if (cards.length > 0) {
-    container.innerHTML = cards.map(createHTMLCard).join("");
+  if (window.innerWidth > 690) {
+    if (cards.length > 0) {
+      container.innerHTML = cards.map(createHTMLCardBiggerDevice).join("");
+    } else {
+      container.innerHTML = "<p>No recommendations found for the selected criteria.</p>";
+    }
   } else {
-    container.innerHTML = "<p>No recommendations found for the selected criteria.</p>";
+    if (cards.length > 0) {
+      container.innerHTML = cards.map(createHTMLCard).join("");
+    } else {
+      container.innerHTML = "<p>No recommendations found for the selected criteria.</p>";
+    }
   }
+
 }
 
 //Cargar datos al iniciar
+window.addEventListener("resize", () => {
+  renderCards(window.allRecommendations);
+});
+
+
 document.addEventListener("DOMContentLoaded", async function() {
   const recommendations = await fetchRecommendations();
   window.allRecommendations = recommendations;
   renderCards(recommendations);
 });
 
-const test = await supabase.from("recommendations").select("*");
-console.log(test);
