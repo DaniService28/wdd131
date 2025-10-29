@@ -100,7 +100,7 @@ document.querySelector('.search-bar').addEventListener('submit', function(event)
 // Renderizar tarjetas
 function renderCards(cards) {
   const container = document.querySelector('.card-container');
-  if (window.innerWidth > 690) {
+  if (window.innerWidth >= 490) {
     if (cards.length > 0) {
       container.innerHTML = cards.map(createHTMLCardBiggerDevice).join("");
     } else {
