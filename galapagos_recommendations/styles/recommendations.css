@@ -132,7 +132,7 @@ main h1, .introduction {
 .rating {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.2rem;
 }
 
 .tag {
@@ -145,6 +145,10 @@ main h1, .introduction {
   font-weight: normal;
 }
 
+.rating{
+  padding-left: 8px;
+}
+
 .rating p{
   margin: 0;
   font-weight: bold;
@@ -152,14 +156,15 @@ main h1, .introduction {
 
 .counted-reviews{
   font-size: 0.9rem;
-  color: var(--terciary-color);
   font-weight: normal;
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .star {
   color: gold;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  margin-bottom: 0;
+  
 }
 
 /* Bottom content */
