@@ -29,6 +29,7 @@ function createHTMLCard(card) {
 
   return `
     <section class="option-card">
+    <a class="more-info" href="moreInformation.html?id=${card.id}">
       <div class="card-content">
         <div class="top-card">
           <img src="${card.image[0]}" alt="${card.title}">
@@ -43,9 +44,9 @@ function createHTMLCard(card) {
       </div>
       <div class="card-bottom">
         <h3>${card.title}</h3>
-        <p>${card.description} <a class="more-info" href="moreInformation.html?id=${card.id}">more...</a></p>
-        
+        <p>${card.description}</p>
       </div>
+      </a>
     </section>
   `;
 }
